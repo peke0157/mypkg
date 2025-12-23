@@ -28,6 +28,7 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
+            'pitch_checker = mypkg.pitch_checker:main',
         ],
     },
 )
