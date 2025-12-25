@@ -15,14 +15,14 @@ class PitchChecker(Node):
         # --- パブリッシャーの作成 ---
         self.pub = self.create_publisher(String, '/pitch/warning', 10)
 
-        self.srv = self.create_service(Trigger, '/count_pitch' self.check_pitch_callback)
+        self.srv = self.create_service(Trigger, '/count_pitch', self.check_pitch_callback)
 
     def check_pitch_callback(self, request, response):
         # 球数を増やす
         self.current_count += 1
 
         # 球数を取得
-        limit = self.get_parameter('pitch_limit').get_parameter_value().integer?_value
+        limit = self.get_parameter('pitch_limit').get_parameter_value().integer_value
 
         self.get_logger().info(f'Pitch_Count: {self.current_count}/{limit}')
 
