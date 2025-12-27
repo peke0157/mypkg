@@ -26,8 +26,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'talker = mypkg.talker:main',
-            'listener = mypkg.listener:main',
+            'pitch_server = mypkg.pitchserver:main',
+            'pitch_client = mypkg.pitchclient:main',
             'pitch_checker = mypkg.pitch_checker:main',
         ],
     },
