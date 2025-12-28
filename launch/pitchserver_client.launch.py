@@ -10,9 +10,6 @@ def generate_launch_description():
             package='mypkg',
             executable='PitchServer',
             output='screen',
-            parameters=[
-                {'pitch_limit': 5}
-                ]
             )
     client = launch_ros.actions.Node(
             package='mypkg',
