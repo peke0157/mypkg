@@ -29,8 +29,8 @@ class PitchClient(Node):
             self.get_logger().error('Server call failed: {e}')
 
 
-def main(args=Node):
-    rclpy.init(args=args)
+def main():
+    rclpy.init()
     node = PitchClient
     try:
         rclpy.spin(node)

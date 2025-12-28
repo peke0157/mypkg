@@ -44,8 +44,8 @@ class PitchServer(Node):
         return response        
 
 
-    def main(args=None):
-        rclpy.init(args=args)
+    def main():
+        rclpy.init()
         node = PitchServer
         try:
             rclpy.spin(node)
