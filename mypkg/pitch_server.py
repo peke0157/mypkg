@@ -17,7 +17,7 @@ class PitchServer(Node):
 
         self.srv = self.create_service(Trigger, '/count_pitch', self.check_pitch_callback)
 
-        self.get_logger().infoa('Pitch Server Ready')
+        self.get_logger().info('Pitch Server Ready')
 
 
     def check_pitch_callback(self, request, response):

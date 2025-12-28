@@ -11,7 +11,7 @@ class PitchClient(Node):
         self.cli = self.create_client(Trigger, '/count_pitch')
 
         while not self.cli.wait_for_service(timeout_sec=1.0):
-            self.get.logger().info('Service not available, waiting again...')
+            self.get_logger().info('Service not available, waiting again...')
 
 
         self.timer = self.create_timer(1.0, self.send_request)
@@ -19,7 +19,7 @@ class PitchClient(Node):
     def send_request(self):
         req = Trigger.Request()
         future = self.cli.call_async(req)
-        future.add_done_callback(seld.reponse_callback)
+        future.add_done_callback(seld.response_callback)
 
     def response_callback(self, future):
         try:
